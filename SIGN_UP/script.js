@@ -46,7 +46,7 @@ else{
           return false
       }else{
         alert("SUCCESSFUL, Kindly Login on Next Page!");
-        window.open("./sign_in/index.html", target = "_self")
+        window.open("../sign_in/index.html", target = "_self")
       }
 
   }
