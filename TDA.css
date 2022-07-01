@@ -147,7 +147,7 @@ h4 {
 	grid-gap: 1rem;
     margin: 0 auto;
 	margin-bottom: 1.5rem;
-	width: 60%;
+	width: 50%;
 }
 
 .create-todo .options label {
@@ -215,7 +215,7 @@ input:checked ~ .bubble::after {
 
 .create-todo input[type="submit"] {
 	display: block;
-	width: 50%;
+	width: 70%;
 	margin: 0 auto;
 	font-size: 1.125rem;
 	padding: 1rem 1.5rem;
@@ -293,3 +293,95 @@ input:checked ~ .bubble::after {
 	text-decoration: line-through;
 	color: var(--grey);
 }
+
+
+/* MEDIA QUARIES */
+
+@media screen and (max-width:600px) {
+
+	.greeting .title, 
+	.greeting .title input {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+
+	.create-todo input[type="text"] {
+		width: 80%;
+		font-size: 1rem;
+	}
+	.create-todo .options {
+		width: 80%;
+	}
+
+	.create-todo input[type="submit"] {
+		width: 100%;
+		font-size: 1rem;
+	}
+
+	.todo-item .todo-content input {
+		font-size: 1rem;
+	}
+
+}	
+
+@media screen and (max-width:768px) {
+
+	body{
+		background-color: red;
+	}
+	.greeting .title, 
+	.greeting .title input {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+
+	.create-todo input[type="text"] {
+		width: 80%;
+		font-size: 1rem;
+	}
+	.create-todo .options {
+		width: 80%;
+	}
+
+	.create-todo input[type="submit"] {
+		width: 100%;
+		font-size: 1rem;
+	}
+
+	.todo-item .todo-content input {
+		font-size: 1rem;
+	}
+
+}
+
+@media screen and (max-width:992px) {
+
+	body{
+		background-color: pink;
+	}
+	.greeting .title, 
+	.greeting .title input {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+
+	.create-todo input[type="text"] {
+		width: 80%;
+		font-size: 1rem;
+	}
+	.create-todo .options {
+		width: 80%;
+	}
+
+	.create-todo input[type="submit"] {
+		width: 100%;
+		font-size: 1rem;
+	}
+
+	.todo-item .todo-content input {
+		font-size: 1rem;
+	}
+
+}
+
+
