@@ -21,7 +21,7 @@
     right: 0;
     visibility: hidden;
     display: inline;
-	background: rgba(185, 48, 0, 0.1);
+	background: #4ea09d;
 	margin-top: -33px;
     width: 140px;
     height: 100vh;
@@ -33,6 +33,10 @@
     margin: -15px 15px;
     font-size: 2rem;
 }
+
+.icon_times{
+   color: #fff
+}	   
 
 .icon_times{
 	margin: 15px;
@@ -55,7 +59,7 @@
 
 .nav_link a{
     text-decoration: none;
-    color: #4ea09d;
+    color: #fff;
 }
 
 .nav_link a:hover{
