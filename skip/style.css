@@ -19,8 +19,17 @@ h1 {
   color: #b72f00;
 }
 .img-fluid{
-  height: 270px;
+  height: 260px;
   width: 250px;
+}
+
+.img_he1{
+  height: 310px;
+}
+
+
+.img_he2{
+  height: 305px;
 }
 
 .carousel-indicators li {
@@ -33,10 +42,18 @@ h1 {
 .carousel-indicators .active {
   background-color: #2d2e2d;
 }
-h2 {
+
+h2 a {
+  text-decoration: none;
   color: #b72f00;
   font-size: 22px;
 }
+
+h2 a:hover {
+  text-decoration: none;
+  color: #b72f00;
+}
+
 h3 {
   font-size: 20px;
 }
