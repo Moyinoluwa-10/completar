@@ -187,6 +187,10 @@ input:focus{
         margin-left: -40px;
 
     }
+    
+        .form .pro a{
+        margin-left: 15px;
+    }
 
 }
 
