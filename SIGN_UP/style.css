@@ -181,3 +181,12 @@ input:focus{
        
     }
 }
+
+@media only screen and (max-width:375px){
+    .form a{
+        margin-left: -40px;
+
+    }
+
+}
+
