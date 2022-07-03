@@ -24,62 +24,39 @@ if(password.value === ''){
 } 
 
 else{
-  const prePayload = new FormData(form);
-  const payload = new URLSearchParams(prePayload);
-  console.log([...payload]);
-  fetch("https://todo22a.herokuapp.com/api/v1/user/login", {
-      method: 'POST',
-      body: payload,
-      redirect: 'follow'
-  })
-      .then(res => res.json())
-      .then(data => console.log(data))
-      .catch(err => console.log('err', err));
-  setTimeout(openNew, 3000)
-  function openNew() {
-      if(email.value === '' || password.value === '' ){
-          return false
-      }else{
-        alert("Welcome!");
-        window.open("../skip/index.html", target = "_self")
-      }
+      const prePayload = new FormData(form);
+      const payload = new URLSearchParams(prePayload);
+      console.log([...payload]);
+      fetch('https://todo22a.herokuapp.com/api/v1/user/login', {
+        method: 'POST',
+        body: payload,
+        redirect: 'follow'
+      })
+        .then(function (res) {
+            console.log(res.status);
+            if (res.status === 404) {
+                alert(`User with email does not exist.`)
+            } else if (res.status === 401) {
+                alert(`Incorrect password, try again!`)
+            } else {
+                setTimeout(openNew, 2000)
+                function openNew() {
+                  if(email.value === '' || password.value === '' ){
+                      return false
+                  }else{
+                    alert("Welcome!");
+                    window.open("../skip/index.html", target = "_self")
+                  }
+            
+              }
+            }
+            // if(!res.ok) {
+            //     throw new Error("HTTP status " + res.status);
+            // }
+            return res.json();
+        })
+        .then(data => console.log(data))
+        .catch(err => console.log('err', err))
 
-  }
-}
-
-
-});
-
-
-// const prePayload = new FormData(form);
-// const payload = new URLSearchParams(prePayload);
-// console.log([...payload]);
-// fetch("https://todo22a.herokuapp.com/api/v1/user/login", {
-//     method: 'POST',
-//     body: payload,
-//     redirect: 'follow'
-// })
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-//     .catch(err => console.log('err', err));
-// setTimeout(openNew, 3000)
-// function openNew() {
-// if(username.value === '' || email.value === '' || password.value === '' ){
-//   return false
-// }else{
-// alert("SUCCESSFUL, Kindly Login on Next Page!");
-// window.open("../SIGN_UP/index.html", target = "_self")
-// }
-
-// var raw = "{\r\n    \r\n	\"email\": \"adegbite@gmail.com\",\r\n	\"password\": \"adeola\"\r\n    \r\n}";
-
-// var requestOptions = {
-//   method: 'POST',
-//   body: raw,
-//   redirect: 'follow'
-// };
-
-// fetch("https://todo22a.herokuapp.com/api/v1/user/login", requestOptions)
-//   .then(response => response.json())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
+    }       
+})
